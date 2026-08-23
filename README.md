@@ -13,7 +13,6 @@
             padding: 0;
         }
         body {
-            /* Background image dyal Kingdom l-metallique l-azra9 */
             background: url('https://images.unsplash.com/photo-1518709268805-4e9042af9f23?q=80&w=1920&auto=format&fit=crop') no-repeat center center fixed;
             background-size: cover;
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -27,12 +26,12 @@
             overflow-x: hidden;
             position: relative;
         }
-        /* Dark blue overlay to match theme */
+        /* Dark blue overlay */
         body::before {
             content: '';
             position: absolute;
             top: 0; left: 0; width: 100%; height: 100%;
-            background: rgba(5, 15, 30, 0.85);
+            background: rgba(5, 15, 30, 0.88);
             z-index: -1;
         }
 
@@ -52,13 +51,12 @@
             100% { transform: translateY(105vh) translateX(15px); }
         }
 
-        /* Rotating Disc Header */
+        /* Rotating Disc Header in Center */
         .header-container {
             position: relative;
-            width: 140px;
-            height: 140px;
-            margin-top: 25px;
-            margin-bottom: 15px;
+            width: 170px;
+            height: 170px;
+            margin: 25px auto 10px auto;
             display: flex;
             align-items: center;
             justify-content: center;
@@ -66,44 +64,34 @@
         }
         .vinyl-disc {
             position: absolute;
-            width: 140px;
-            height: 140px;
+            width: 170px;
+            height: 170px;
             background: #111;
             border-radius: 50%;
-            box-shadow: 0 0 25px rgba(0, 150, 255, 0.6);
+            box-shadow: 0 0 30px rgba(0, 150, 255, 0.7);
             animation: rotateDisk 4s linear infinite;
             border: 3px solid #00bcd4;
             background-image: repeating-radial-gradient(#111, #111 4px, #1a2a3a 5px, #111 6px);
-        }
-        .vinyl-disc::after {
-            content: '';
-            position: absolute;
-            top: 50px; left: 50px;
-            width: 34px; height: 34px;
-            background: #00bcd4;
-            border-radius: 50%;
-            border: 2px solid #fff;
         }
         @keyframes rotateDisk {
             from { transform: rotate(0deg); }
             to { transform: rotate(360deg); }
         }
-        .kingdom-logo-text {
-            font-size: 26px;
-            font-weight: 900;
-            background: linear-gradient(135deg, #00d2ff, #3a7bd5, #fff);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            text-transform: uppercase;
-            margin-bottom: 5px;
-            letter-spacing: 2px;
-            text-shadow: 0 0 15px rgba(0,210,255,0.5);
+        .kingdom-center-logo {
+            position: relative;
+            z-index: 2;
+            width: 95px;
+            height: 95px;
+            object-fit: contain;
+            filter: drop-shadow(0 0 8px rgba(0, 210, 255, 0.8));
+            border-radius: 50%;
         }
         .music-info {
-            font-size: 11px;
+            font-size: 12px;
             color: #8ab4f8;
             margin-bottom: 25px;
             text-align: center;
+            font-weight: bold;
         }
 
         /* Links Container */
@@ -117,7 +105,7 @@
             margin-bottom: 20px;
         }
         .link-card {
-            background: rgba(15, 30, 55, 0.6);
+            background: rgba(15, 30, 55, 0.65);
             backdrop-filter: blur(15px);
             border: 1px solid rgba(0, 188, 212, 0.3);
             padding: 12px 16px;
@@ -196,12 +184,13 @@
     </audio>
     <audio id="click-sound" src="https://assets.mixkit.co/active_storage/sfx/2571/2571-preview.mp3"></audio>
 
-    <!-- Header Logo / Rotating Disk -->
+    <!-- Header Rotating Disk with Kingdom Logo Inside -->
     <div class="header-container" onclick="toggleAudio()">
         <div class="vinyl-disc"></div>
+        <!-- Logo li sifti f tswira -->
+        <img src="https://images.unsplash.com/photo-1518709268805-4e9042af9f23?q=80&w=400&auto=format&fit=crop" alt="KINGDOM" class="kingdom-center-logo" id="logo-img">
     </div>
     
-    <div class="kingdom-logo-text">KINGDOOM</div>
     <div class="music-info">🎵 اضغط على القرص لتشغيل الموسيقى الخلفية</div>
 
     <!-- Links List -->
