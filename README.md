@@ -26,7 +26,6 @@
             overflow-x: hidden;
             position: relative;
         }
-        /* Dark blue overlay */
         body::before {
             content: '';
             position: absolute;
@@ -54,9 +53,9 @@
         /* Rotating Disc Header in Center */
         .header-container {
             position: relative;
-            width: 170px;
-            height: 170px;
-            margin: 25px auto 10px auto;
+            width: 180px;
+            height: 180px;
+            margin: 30px auto 15px auto;
             display: flex;
             align-items: center;
             justify-content: center;
@@ -64,11 +63,11 @@
         }
         .vinyl-disc {
             position: absolute;
-            width: 170px;
-            height: 170px;
+            width: 180px;
+            height: 180px;
             background: #111;
             border-radius: 50%;
-            box-shadow: 0 0 30px rgba(0, 150, 255, 0.7);
+            box-shadow: 0 0 35px rgba(0, 150, 255, 0.7);
             animation: rotateDisk 4s linear infinite;
             border: 3px solid #00bcd4;
             background-image: repeating-radial-gradient(#111, #111 4px, #1a2a3a 5px, #111 6px);
@@ -80,16 +79,16 @@
         .kingdom-center-logo {
             position: relative;
             z-index: 2;
-            width: 95px;
-            height: 95px;
+            width: 110px;
+            height: 110px;
             object-fit: contain;
-            filter: drop-shadow(0 0 8px rgba(0, 210, 255, 0.8));
+            filter: drop-shadow(0 0 10px rgba(0, 210, 255, 0.9));
             border-radius: 50%;
         }
         .music-info {
             font-size: 12px;
             color: #8ab4f8;
-            margin-bottom: 25px;
+            margin-bottom: 30px;
             text-align: center;
             font-weight: bold;
         }
@@ -97,18 +96,18 @@
         /* Links Container */
         .links-container {
             width: 100%;
-            max-width: 400px;
+            max-width: 420px;
             display: flex;
             flex-direction: column;
-            gap: 12px;
+            gap: 14px;
             z-index: 2;
-            margin-bottom: 20px;
+            margin-bottom: 25px;
         }
         .link-card {
             background: rgba(15, 30, 55, 0.65);
             backdrop-filter: blur(15px);
             border: 1px solid rgba(0, 188, 212, 0.3);
-            padding: 12px 16px;
+            padding: 14px 18px;
             border-radius: 14px;
             display: flex;
             align-items: center;
@@ -129,11 +128,11 @@
             align-items: center;
             gap: 12px;
             font-weight: 600;
-            font-size: 15px;
+            font-size: 16px;
         }
         .link-content i {
-            font-size: 22px;
-            width: 28px;
+            font-size: 24px;
+            width: 30px;
             text-align: center;
         }
         
@@ -146,9 +145,9 @@
         .btn-visit {
             background: #00bcd4;
             color: #050f1e;
-            padding: 5px 12px;
+            padding: 6px 14px;
             border-radius: 8px;
-            font-size: 12px;
+            font-size: 13px;
             font-weight: bold;
             transition: all 0.2s;
         }
@@ -159,10 +158,10 @@
 
         /* Warning Message Box */
         .warning-box {
-            background: rgba(255, 165, 0, 0.12);
+            background: rgba(255, 165, 0, 0.15);
             border: 1px solid rgba(255, 165, 0, 0.4);
             color: #ffb703;
-            padding: 10px 14px;
+            padding: 12px 16px;
             border-radius: 12px;
             text-align: center;
             font-size: 13px;
@@ -172,23 +171,22 @@
             justify-content: center;
             gap: 8px;
             margin: 5px 0;
-            box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+            box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+            direction: ltr;
         }
     </style>
 </head>
 <body>
 
-    <!-- Audio Elements -->
     <audio id="bg-music" loop>
         <source src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3" type="audio/mp3">
     </audio>
     <audio id="click-sound" src="https://assets.mixkit.co/active_storage/sfx/2571/2571-preview.mp3"></audio>
 
-    <!-- Header Rotating Disk with Kingdom Logo Inside -->
+    <!-- Header Rotating Disk with Logo.JPG -->
     <div class="header-container" onclick="toggleAudio()">
         <div class="vinyl-disc"></div>
-        <!-- Logo li sifti f tswira -->
-        <img src="https://images.unsplash.com/photo-1518709268805-4e9042af9f23?q=80&w=400&auto=format&fit=crop" alt="KINGDOM" class="kingdom-center-logo" id="logo-img">
+        <img src="Logo.JPG" alt="KINGDOOM" class="kingdom-center-logo" onerror="this.src='https://i.ibb.co/Yf3rV1W/kingdom-logo-metallique.png'">
     </div>
     
     <div class="music-info">🎵 اضغط على القرص لتشغيل الموسيقى الخلفية</div>
@@ -196,7 +194,58 @@
     <!-- Links List -->
     <div class="links-container">
         
-        <!-- Discord -->
+        <!-- Case 1: TikTok Page -->
+        <a href="https://www.tiktok.com/@salvyarap.00?_r=1&_t=ZS-997aGuCvbQm" class="link-card" target="_blank" onclick="playClickSound()">
+            <div class="link-content">
+                <i class="fa-brands fa-tiktok"></i>
+                <span>KINGDOOM PAGE</span>
+            </div>
+            <div class="btn-visit">Visit</div>
+        </a>
+
+        <!-- Case 2: TikTok Group -->
+        <a href="https://tiktok.me/group/ZSVmNrKjE/" class="link-card" target="_blank" onclick="playClickSound()">
+            <div class="link-content">
+                <i class="fa-brands fa-tiktok"></i>
+                <span>KINGDOOM GROP</span>
+            </div>
+            <div class="btn-visit">Visit</div>
+        </a>
+
+        <!-- Case 3: Instagram Group -->
+        <a href="https://ig.me/j/AbbZqkFSPewXKu88/" class="link-card" target="_blank" onclick="playClickSound()">
+            <div class="link-content">
+                <i class="fa-brands fa-instagram"></i>
+                <span>KINGDOM GROP</span>
+            </div>
+            <div class="btn-visit">Visit</div>
+        </a>
+
+        <!-- Warning Box (English) -->
+        <div class="warning-box">
+            <i class="fa-solid fa-triangle-exclamation"></i>
+            <span>WARNING: If the link doesn't work, send it in the comments or direct message to the account!</span>
+        </div>
+
+        <!-- Case 4: Personal Account (Under Warning) -->
+        <a href="https://www.instagram.com/samatx.i?igsi=MXI5Mno5cWh2dWowMA%3D%3D&utm_source=qr" class="link-card" target="_blank" onclick="playClickSound()">
+            <div class="link-content">
+                <i class="fa-brands fa-instagram"></i>
+                <span>Personal Account</span>
+            </div>
+            <div class="btn-visit">Visit</div>
+        </a>
+
+        <!-- Case 5: Snap Group -->
+        <a href="https://snapchat.com/t/hXH31WpV" class="link-card" target="_blank" onclick="playClickSound()">
+            <div class="link-content">
+                <i class="fa-brands fa-snapchat"></i>
+                <span>Snap Group</span>
+            </div>
+            <div class="btn-visit">Visit</div>
+        </a>
+
+        <!-- Case 6: Discord -->
         <a href="https://discord.com" class="link-card" target="_blank" onclick="playClickSound()">
             <div class="link-content">
                 <i class="fa-brands fa-discord"></i>
@@ -205,77 +254,24 @@
             <div class="btn-visit">Visit</div>
         </a>
 
-        <!-- Instagram Main -->
-        <a href="https://instagram.com" class="link-card" target="_blank" onclick="playClickSound()">
-            <div class="link-content">
-                <i class="fa-brands fa-instagram"></i>
-                <span>KINGDOM Instagram (Main)</span>
-            </div>
-            <div class="btn-visit">Visit</div>
-        </a>
-
-        <!-- Instagram Community Group -->
-        <a href="https://instagram.com" class="link-card" target="_blank" onclick="playClickSound()">
-            <div class="link-content">
-                <i class="fa-brands fa-instagram"></i>
-                <span>KINGDOM Community Group</span>
-            </div>
-            <div class="btn-visit">Visit</div>
-        </a>
-
-        <!-- Warning Box -->
-        <div class="warning-box">
-            <i class="fa-solid fa-triangle-exclamation"></i>
-            <span>WARNING: إذا مamadmech اللينك، صيفطو في الكومنتيرات أو خاص للحساب!</span>
-        </div>
-
-        <!-- Personal Account -->
-        <a href="https://instagram.com" class="link-card" target="_blank" onclick="playClickSound()">
-            <div class="link-content">
-                <i class="fa-brands fa-instagram"></i>
-                <span>Hassan's Personal Account (الحساب الشخصي)</span>
-            </div>
-            <div class="btn-visit">Visit</div>
-        </a>
-
-        <!-- Snapchat -->
-        <a href="https://snapchat.com" class="link-card" target="_blank" onclick="playClickSound()">
-            <div class="link-content">
-                <i class="fa-brands fa-snapchat"></i>
-                <span>Hassan's Snapchat (سناب شات)</span>
-            </div>
-            <div class="btn-visit">Visit</div>
-        </a>
-
-        <!-- TikTok -->
-        <a href="https://tiktok.com" class="link-card" target="_blank" onclick="playClickSound()">
-            <div class="link-content">
-                <i class="fa-brands fa-tiktok"></i>
-                <span>Hassan's TikTok (تيك توك)</span>
-            </div>
-            <div class="btn-visit">Visit</div>
-        </a>
-
     </div>
 
     <script>
-        // Snow Effect
         function createSnowflake() {
             const snow = document.createElement('div');
             snow.classList.add('snowflake');
             snow.innerHTML = '❄';
             snow.style.left = Math.random() * window.innerWidth + 'px';
             snow.style.top = '-20px';
-            snow.style.fontSize = (Math.random() * 8 + 8) + 'px';
+            snow.style.fontSize = (Math.random() * 10 + 8) + 'px';
             snow.style.animationDuration = (Math.random() * 3 + 2) + 's';
             snow.style.opacity = Math.random() * 0.7 + 0.3;
             document.body.appendChild(snow);
 
             setTimeout(() => { snow.remove(); }, 5000);
         }
-        setInterval(createSnowflake, 180);
+        setInterval(createSnowflake, 150);
 
-        // Music Toggle
         let musicPlaying = false;
         function toggleAudio() {
             const music = document.getElementById('bg-music');
@@ -290,7 +286,6 @@
             }
         }
 
-        // Click Sound Effect for Links
         function playClickSound() {
             const clickAudio = document.getElementById('click-sound');
             clickAudio.currentTime = 0;
